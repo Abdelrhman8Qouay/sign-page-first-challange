@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>| Sign For User |</title>
+</head>
+<body>
+    <div id="app">
+
+        <div class="container">
+            <div class="big_card">
+                <div class="sign_all_cards sign_up_card">
+                    <h2>Welcome To <br> Our Community, SignUp here</h2>
+                    <img src="./assets/spaceShip.png" alt="body" class="body">
+                    <form class="form_card">
+                        <div class="field_form">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required >
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="field_form">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required >
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div class="field_form">
+                            <input type="email" id="email" name="email" placeholder="Email" required >
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="field_form">
+                            <input type="password" id="password" name="password" placeholder="Password" required >
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="field_form">
+                            <input type="password" id="repassword" name="repassword" placeholder="Re Password" required >
+                            <label for="repassword">Re Password</label>
+                        </div>
+                        <button type="submit" class="send-btn" name="send-btn">Sign Now</button>
+                    </form>
+
+                    <div class="or_hr"></div>
+
+                    <div class="connect_social">
+                        <button data-color="facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </button>
+                        <button data-color="google">
+                            <ion-icon name="logo-google"></ion-icon>
+                        </button>
+                        <button data-color="linked">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </button>
+                    </div>
+
+                    <a class="change-to" href="#">go sign in</a>
+                </div>
+
+                <div class="img_sign">
+                    <img src="https://static.vecteezy.com/system/resources/previews/002/868/086/original/space-background-illustration-for-explore-in-outer-space-vector.jpg" alt="image of sign">
+                </div>
+
+                <div class="sign_all_cards sign_in_card">
+                    <h2>I Want To <br> Return.. go Sign In</h2>
+                    <img src="./assets/Butterfly.png" alt="body" class="body">
+                    <form class="form_card">
+                        <div class="field_form">
+                            <input type="text" id="name" name="name" placeholder="Name" required >
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="field_form">
+                            <input type="email" id="email" name="email" placeholder="Email" required >
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="field_form">
+                            <input type="password" id="password" name="password" placeholder="Password" required >
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="field_form_click">
+                            <label for="rememberSignIn">Remember Me</label>
+                            <input type="checkbox" name="rememberSignIn" id="rememberSignIn">
+                        </div>
+                        <button type="submit" class="send-btn" name="send-btn">Sign Now</button>
+                    </form>
+
+                    <div class="or_hr"></div>
+
+                    <div class="connect_social">
+                        <button data-color="facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </button>
+                        <button data-color="google">
+                            <ion-icon name="logo-google"></ion-icon>
+                        </button>
+                        <button data-color="linked">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </button>
+                    </div>
+
+                    <a class="change-to" href="#">go sign up</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="master.js"></script>
+</body>
+</html>

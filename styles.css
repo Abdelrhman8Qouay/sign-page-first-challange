@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: none;
+}
+
+:root {
+    --text: #fff;
+    --background: #fff;
+    --main: #27225a;
+    --transition: 0.4s;
+}
+
+body {
+    background: linear-gradient(153deg, #f4a942 -45%, #000000 40%);
+}
+
+
+/* work with in class  */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+/* before class ---------- */
+.container .sign_up_card {
+    display: flex;
+}
+.container .sign_in_card {
+    display: none;
+}
+/* after class ---------- */
+.container.in .sign_up_card {
+    display: none;
+}
+.container.in .sign_in_card {
+    display: flex;
+}
+
+/* big card  */
+.container .big_card {
+    max-width: 75vw;
+    min-height: 400px;
+    max-height: 800px;
+    transition: 1.5s;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    background: var(--background);
+}
+.container.in .big_card{
+    transform: rotate3d(1, 1, 1, 360deg);
+}
+
+/* styling for the main image of sign */
+.container .big_card .img_sign {
+    flex: 1 0 50%;
+    height: auto;
+}
+.container .big_card .img_sign img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .container .big_card .img_sign {
+        display: none;
+    }
+}
+
+
+/* styling for hr */
+.or_hr {
+    position: relative;
+    background-color: var(--text);
+    width: 100%;
+    height: 1px;
+}
+.or_hr::before {
+    content: "or";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background);
+    color: var(--text);
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+/* styling for all sign */
+.sign_all_cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    flex: 1 0 50%;
+    position: relative;
+}
+
+.sign_all_cards h2 {
+    position: relative;
+    z-index: 20;
+    right: -35%;
+    padding: 1.1rem;
+    font-weight: bold;
+    background-color: var(--main);
+    box-shadow: 0 0 12px 0px #000;
+    border-radius: 3px;
+    color: var(--text);
+}
+.sign_in_card h2 {
+    left: -35%;
+}
+
+
+.sign_all_cards .body {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -60%;
+    top: 40%;
+    z-index: 200;
+    animation: floatingSky 2s ease-in-out infinite;
+}
+@keyframes floatingSky {
+    0% {
+        top: 39%;
+    }
+    50% {
+        top: 41%;
+    }
+    100% {
+        top: 39%;
+    }
+}
+.sign_all_cards.sign_in_card .body {
+    right: unset;
+    left: -60%;
+}
+
+.sign_all_cards .form_card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sign_all_cards .form_card input {
+    border: 1px solid rgb(155, 155, 155);
+    outline: none;
+    background-color: var(--background);
+    color: var(--text);
+    padding: .5rem .5rem .5rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+}
+.sign_all_cards .form_card input::placeholder {
+    color: transparent;
+}
+
+
+.sign_all_cards .form_card .field_form {
+    position: relative;
+}
+.sign_all_cards .form_card .field_form label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(155, 155, 155);
+    transition: 0.4s;
+    font-weight: bold;
+}
+/*
+.sign_up_card .form_card input:valid + label,
+.sign_up_card .form_card input:focus-visible + label {
+    color: rgb(54, 153, 51);
+} */
+
+.sign_all_cards .form_card input:focus-within,
+.sign_all_cards .form_card input:valid {
+    border: 1px solid rgb(54, 153, 51);
+}
+
+.sign_all_cards .form_card input:focus-within + label,
+.sign_all_cards .form_card input:valid + label{
+    color: rgb(54, 153, 51);
+    left: 13%;
+    top: -2px;
+    font-size: 11px;
+    background: var(--background);
+    border-radius: 12px;
+    padding: 2px;
+    border-left: 1px solid rgb(54, 153, 51);
+    border-right: 1px solid rgb(54, 153, 51);
+}
+
+
+.sign_all_cards .form_card .field_form_click {
+    width: 100%;
+    color: var(--text);
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+}
+.sign_all_cards .form_card .field_form_click input {
+    display: inline-block;
+    width: max-content;
+}
+
+
+.sign_all_cards .form_card .send-btn {
+    border: none;
+    outline: none;
+    background: var(--main);
+    padding: 15px;
+    color: var(--text);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+
+.sign_all_cards .connect_social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.sign_all_cards .connect_social button {
+    border: none;
+    background-color: transparent;
+    color: var(--text);
+    font-size: 40px;
+}
+.sign_all_cards .connect_social button[data-color="facebook"] {
+    color: #4267B2;
+}
+.sign_all_cards .connect_social button[data-color="google"] {
+    color: #000;
+}
+.sign_all_cards .connect_social button[data-color="linked"] {
+    color: #333333;
+}
