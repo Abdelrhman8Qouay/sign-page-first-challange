@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;1,100&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: none;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 :root {
-    --text: #fff;
+    --text: #6d6fd5;
     --background: #fff;
     --main: #27225a;
     --transition: 0.4s;
 }
 
 body {
-    background: linear-gradient(153deg, #f4a942 -45%, #000000 40%);
+    background: linear-gradient(153deg, #6dc2d5 -45%, #000000 40%);
 }
 
 
@@ -46,14 +48,14 @@ body {
     max-width: 75vw;
     min-height: 400px;
     max-height: 800px;
-    transition: 1.5s;
+    transition: .5s;
     display: flex;
     flex-direction: row;
     border-radius: 12px;
     background: var(--background);
 }
 .container.in .big_card{
-    transform: rotate3d(1, 1, 1, 360deg);
+    transform: rotateY(360deg);
 }
 
 /* styling for the main image of sign */
@@ -66,12 +68,6 @@ body {
     height: 100%;
     border-radius: 12px;
     object-fit: cover;
-}
-
-@media (max-width: 1024px) {
-    .container .big_card .img_sign {
-        display: none;
-    }
 }
 
 
@@ -91,7 +87,7 @@ body {
     background: var(--background);
     color: var(--text);
     padding: 5px;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: bold;
     border-radius: 50%;
 }
@@ -189,20 +185,20 @@ body {
 
 .sign_all_cards .form_card input:focus-within,
 .sign_all_cards .form_card input:valid {
-    border: 1px solid rgb(54, 153, 51);
+    border: 1px solid var(--main);
 }
 
 .sign_all_cards .form_card input:focus-within + label,
 .sign_all_cards .form_card input:valid + label{
-    color: rgb(54, 153, 51);
+    color: var(--main);
     left: 13%;
     top: -2px;
     font-size: 11px;
     background: var(--background);
     border-radius: 12px;
     padding: 2px;
-    border-left: 1px solid rgb(54, 153, 51);
-    border-right: 1px solid rgb(54, 153, 51);
+    border-left: 1px solid var(--main);
+    border-right: 1px solid var(--main);
 }
 
 
@@ -226,7 +222,8 @@ body {
     padding: 15px;
     color: var(--text);
     border-radius: 5px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -240,6 +237,7 @@ body {
     background-color: transparent;
     color: var(--text);
     font-size: 40px;
+    cursor: pointer;
 }
 .sign_all_cards .connect_social button[data-color="facebook"] {
     color: #4267B2;
@@ -249,4 +247,40 @@ body {
 }
 .sign_all_cards .connect_social button[data-color="linked"] {
     color: #333333;
+}
+
+
+.sign_all_cards .a {
+    color: var(--main);
+    text-align: center;
+
+}
+
+.sign_all_cards .p {
+    color: var(--text);
+    text-align: center;
+}
+
+
+
+/* Media changer */
+@media (max-width: 1024px) {
+    .container .big_card .img_sign {
+        display: none;
+    }
+
+    .container .big_card .sign_all_cards .body {
+        display: none;
+    }
+}
+
+
+
+
+#app #made {
+    text-align: center;
+    color: var(--background);
+}
+#app #made a {
+    color: var(--text);
 }
